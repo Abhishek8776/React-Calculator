@@ -8,8 +8,9 @@ function App() {
   const onButtonClick = (buttonText) => {
     if (buttonText === "C"){
       setDisplay("")
-    }else if (buttonText === "=") {
-      console.log(buttonText)
+    } else if (buttonText === "=") {
+      const result = eval(displayText)
+      setDisplay(result)
     } else {
       const newDisplayText = displayText + buttonText
       setDisplay(newDisplayText)
